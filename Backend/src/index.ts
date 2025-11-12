@@ -1,0 +1,33 @@
+import express, { Request, Response } from "express";
+import dotenv from "dotenv";
+import { connectPostgres } from "./config/PostgreeDb";
+import cors from "cors";
+import userRouter from "./routes/UserRoute";
+import newsRouter from "./routes/NewsRoute";
+import cookie from "cookie-parser"
+import cookieParser from "cookie-parser";
+
+dotenv.config()
+
+const PORT=process.env.PORT;
+const app = express();
+
+app.use(express.json());
+app.use(cookieParser());
+connectPostgres();
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
+
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello, TypeScript + Node.js Backend!");
+});
+app.use("/api/user",userRouter);
+app.use("/api/news",newsRouter);
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});

@@ -1,0 +1,35 @@
+.highlight-card{
+    width: 90%;
+    height: 70px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 0.1rem black;
+    margin: 0 auto;
+}
+.img-container-card{
+    height: 50px;
+    width: 50px;
+}
+.img-container-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.highlight-card-text-container{
+    display: flex;
+    flex-direction: column;
+}
+.highlight-card-text-container p{
+    opacity: 60%;
+}
+@media screen and (max-width:501px) {
+    .highlight-card{
+        width: 88%;
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,49 @@
+.weather-card{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    padding: 7px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding-left: 10px;
+}
+.weather-temp-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.week-day-name p:nth-child(2) {
+    opacity: 60%;
+}
+.week-day-name{
+    margin-top: auto;
+    margin-bottom: 7px;
+}
+.week-day-name-loading{
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.weather-img-bg{
+    height: 70px;
+    width: 70px;
+}
+.weather-img-bg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.weather-temp-flex h2{
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.week-day-name p{
+    font-size: 14px;
+    font-weight: 500;
+}
