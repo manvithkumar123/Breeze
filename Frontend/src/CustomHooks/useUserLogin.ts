@@ -24,6 +24,5 @@ export const useUserLogin = () => {
   });
   
   const loading = isPending;
-  const success = isSuccess;
   return {email,setEmail,password,setPassword,loginUser,loginResponse,isPending,error,loading,isSuccess};
 };

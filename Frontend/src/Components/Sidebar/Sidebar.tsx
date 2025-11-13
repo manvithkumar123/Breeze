@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { LogoutApi } from "../../Api/Users";
@@ -38,23 +37,23 @@ const Sidebar: React.FC<SidebarProps> = ({ setSidebarOpen }) => {
       </div>
 
       <div className="sidebar-navigations-container">
-        <label onClick={() => navigate("/")}>
+        <label onClick={() => { navigate("/"); setSidebarOpen(false); }}>
           <i className="fa-solid fa-house"></i>
           <h3>Home</h3>
         </label>
-        <label onClick={() => navigate("/news-page")}>
+        <label onClick={() => { navigate("/news-page"); setSidebarOpen(false); }}>
           <i className="fa-solid fa-newspaper"></i>
           <h3>News</h3>
         </label>
-        <label onClick={() => navigate("/login")}>
+        <label onClick={() => { navigate("/login"); setSidebarOpen(false); }}>
           <i className="fa-solid fa-right-to-bracket"></i>
           <h3>Login</h3>
         </label>
-        <label onClick={() => navigate("/register")}>
+        <label onClick={() => { navigate("/register"); setSidebarOpen(false); }}>
           <i className="fa-solid fa-user-plus"></i>
           <h3>Signup</h3>
         </label>
-        <label onClick={handleLogout}>
+        <label onClick={() => { handleLogout(); setSidebarOpen(false); }}>
           <i className="fa-solid fa-arrow-right-from-bracket"></i>
           <h3>Logout</h3>
         </label>

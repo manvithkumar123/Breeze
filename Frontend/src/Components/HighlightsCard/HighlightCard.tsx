@@ -1,4 +1,3 @@
-import { Height } from "@mui/icons-material";
 import "./HighlightCard.css"
 import Skeleton from '@mui/material/Skeleton';
 
