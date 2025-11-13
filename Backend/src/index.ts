@@ -14,7 +14,7 @@ app.use(cookieParser());
 connectPostgres();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["https://breeze12.netlify.app", "http://localhost:5173"],
   credentials: true,
 }));
 
