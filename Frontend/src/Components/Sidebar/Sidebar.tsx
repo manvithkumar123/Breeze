@@ -37,26 +37,27 @@ const Sidebar: React.FC<SidebarProps> = ({ setSidebarOpen }) => {
       </div>
 
       <div className="sidebar-navigations-container">
-        <label onClick={() => { navigate("/"); setSidebarOpen(false); }}>
+        <label onClick={() => { navigate("/")}}>
           <i className="fa-solid fa-house"></i>
           <h3>Home</h3>
         </label>
-        <label onClick={() => { navigate("/news-page"); setSidebarOpen(false); }}>
+        <label onClick={() => { navigate("/news-page"); }}>
           <i className="fa-solid fa-newspaper"></i>
           <h3>News</h3>
         </label>
-        <label onClick={() => { navigate("/login"); setSidebarOpen(false); }}>
+        <label onClick={() => { navigate("/login") }}>
           <i className="fa-solid fa-right-to-bracket"></i>
           <h3>Login</h3>
         </label>
-        <label onClick={() => { navigate("/register"); setSidebarOpen(false); }}>
+        <label onClick={() => { navigate("/register") }}>
           <i className="fa-solid fa-user-plus"></i>
           <h3>Signup</h3>
         </label>
-        <label onClick={() => { handleLogout(); setSidebarOpen(false); }}>
+        <label onClick={() => { handleLogout(); }}>
           <i className="fa-solid fa-arrow-right-from-bracket"></i>
           <h3>Logout</h3>
         </label>
+        <label style={{height:"0px",width:"0px"}} htmlFor="" onClick={()=>setSidebarOpen(false)}></label>
       </div>
     </div>
   );
