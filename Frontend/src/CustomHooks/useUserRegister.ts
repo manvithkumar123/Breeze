@@ -12,7 +12,7 @@ export const useUserRegister = () => {
         mutate : registerUser,
         data:UserData,isPending,isError,isSuccess}=useMutation({
         mutationFn:async()=>{
-            const response = await RegisterApi(registerEmail,registerUsername,registerpassword);
+            const response = await RegisterApi(registerUsername,registerEmail,registerpassword);
             return response;
         },
         onSuccess:(data)=>{
