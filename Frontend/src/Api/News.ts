@@ -17,4 +17,4 @@ export const GetNewsApi = async ()=>{
     }catch(error:any){
         return error.response?.data  || { output: "Unknown error", status: "failed" };
     }
-}
+}   
