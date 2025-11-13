@@ -1,13 +1,10 @@
 import express, { Request, Response } from "express";
-import dotenv from "dotenv";
 import { connectPostgres } from "./config/PostgreeDb";
 import cors from "cors";
 import userRouter from "./routes/UserRoute";
 import newsRouter from "./routes/NewsRoute";
 import cookie from "cookie-parser"
 import cookieParser from "cookie-parser";
-
-dotenv.config()
 
 const PORT = process.env.PORT || 3000;
 const app = express();
