@@ -40,7 +40,13 @@ export const LoginUser=async (req:express.Request,res:express.Response)=>{
         }
         else{
             const token = generateToken({ email: User.email });
-            res.cookie("UserToken", token, { httpOnly: true, secure: process.env.NODE_ENV === "production", maxAge: 7 * 24 * 60 * 60 * 1000, });
+            res.cookie("UserToken", token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: "none",
+                path: "/",
+                maxAge: 7 * 24 * 60 * 60 * 1000,
+              });
             return res.status(200).json({output:"You have been logged in sucessfully, you can continue",status:"success"})
         }
       }catch(error){
