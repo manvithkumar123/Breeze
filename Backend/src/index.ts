@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 
 dotenv.config()
 
-const PORT=process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.json());
@@ -28,6 +28,6 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/user",userRouter);
 app.use("/api/news",newsRouter);
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
